@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>QualityFinder</title>
+</head>
+<body>
+    <header>
+        <h1>QualityFinder</h1>
+        <p>
+            <!-- Alguns links básicos para implementar na barra principal -->
+            <ul>
+                <li>Home</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+        </p>
+        Digite o seu CEP: <input placeholder="CEP" type="text">
+            <!-- Um filtro geral para listar todas as empresas -->
+        <select name="filter" id="mainfilter">
+            <option value="todos">Todos</option>
+            <option value="combos">Combo completo</option>
+            <option value="internet">Planos de internet</option>
+            <option value="promo">Promoções</option>
+        </select>
+        <button>Pesquisar</button>
+    </header>
+    <section>
+        <h2>Resultados</h2>
+        <label for="filter">Filtrar:</label>
+        <select id="filter">
+            <!-- Filtros para ordenação -->
+            <option value="todos">Todos</option>
+            <option value="menorPreco">Menor Preço</option>
+            <option value="maiorPreco">Maior Preço</option>
+        </select>
+        <ul id="priceList">
+            <!-- Lista com filtros aplicados -->
+            <li>Item 1 - R$100</li>
+            <li>Item 2 - R$200</li>
+        </ul>
+    </section>
+</body>
+</html>
