@@ -1,6 +1,9 @@
 from django.urls import path
-from busca.views import index
+from busca import views
 
 urlpatterns = [
-    path('', index, name='index')
+    path('', views.index, name='index'),
+    path('sobre', views.sobre, name='sobre'),
+    path('contato', views.contato, name='contato'),
+    path('pesquisa', views.pesquisa, name='pesquisa')
 ]

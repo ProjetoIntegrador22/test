@@ -1,26 +1,26 @@
 {% load static %}
 {% include 'busca/partials/_header.html' %}
     <header>
-        Digite o seu CEP: <input placeholder="apenas números" type="search" id="cepInput">
+        Digite o seu CEP: <input placeholder="apenas números" type="text">
             <!-- Um filtro geral para listar todas as empresas -->
-        <select name="filtro" id="mainFiltro">
+        <select name="filter" id="mainfilter">
             <option value="todos">Todos</option>
             <option value="combos">Combos</option>
-            <option value="internet">Internet</option>
+            <option value="internet">Planos de internet</option>
             <option value="promo">Promoções</option>
         </select>
         <button>Pesquisar</button>
     </header>
     <section>
         <h2>Resultados</h2>
-        <label for="filtro">Filtrar:</label>
-        <select id="ordemFiltro">
+        <label for="filter">Filtrar:</label>
+        <select id="filter">
             <!-- Filtros para ordenação -->
             <option value="default">A-Z</option>
             <option value="menorPreco">Menor Preço</option>
             <option value="maiorPreco">Maior Preço</option>
         </select>
-        <ul id="precoLista">
+        <ul id="priceList">
             <!-- Lista com filtros aplicados -->
             <li>Item 1 - R$100</li>
             <li>Item 2 - R$200</li>
