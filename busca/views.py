@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from busca.models import ListaTeste
 
 
 # Create your views here.
@@ -13,7 +14,9 @@ def contato(request):
     return render(request, 'busca/contato.html')
 
 def pesquisa(request):
-    return render(request, 'busca/pesquisa.html')
+    items = ListaTeste.objects.all()
+    lista_provedores = {'provedores': items}
+    return render(request, 'busca/pesquisa.html', lista_provedores)
 
 
 

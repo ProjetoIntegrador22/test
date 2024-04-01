@@ -9,7 +9,7 @@
             <option value="internet">Internet</option>
             <option value="promo">Promoções</option>
         </select>
-        <button>Pesquisar</button>
+        <a href="{% url 'pesquisa' %}"><button>Pesquisar</button></a>
     </header>
     <section>
         <h2>Resultados</h2>
@@ -22,8 +22,6 @@
         </select>
         <ul id="precoLista">
             <!-- Lista com filtros aplicados -->
-            <li>Item 1 - R$100</li>
-            <li>Item 2 - R$200</li>
         </ul>
     </section>
 </body>
